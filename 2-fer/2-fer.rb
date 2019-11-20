@@ -1,16 +1,18 @@
-#request user_input
-#X = user_input
-#no user_input = you
-#print "One for X, one for me."
+#rewrite the programm by using a Class and a Method
 
-puts "Hello! \r
+class Twofer
+  def self.twofer(user_input='you')
+    puts "One for #{user_input}, one for me."
+  end
+end
+
+puts "Hello \r
 I am 2-fer. \r
 Please enter your name."
 
 user_input = gets.chomp
-
 if user_input == ""
- user_input = "you"
+  Twofer.twofer()
+else
+  Twofer.twofer(user_input)
 end
-# print the sentenc and use string interpolation to use the variable input of the user
-puts "One for #{user_input}, one for me."
